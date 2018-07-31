@@ -12,6 +12,19 @@ import { Validators } from '@angular/forms';
 })
 export class ReactiveformComponent implements OnInit {
    profileForm:FormGroup
+   check(){
+     if(this.profileForm.value.pass!==this.profileForm.value.cpass)
+     {
+       console.log("password incorrect")
+     }
+     else{
+      console.log("password correct");
+     }
+   }
+    
+   storeData(){
+     localStorage.setItem("data",JSON.stringify(this.profileForm.value));
+   }
   
    constructor() {
     this.profileForm = new FormGroup({
@@ -57,6 +70,7 @@ export class ReactiveformComponent implements OnInit {
       ]),
     
      } );
+
 
 
 

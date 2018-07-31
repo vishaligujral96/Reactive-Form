@@ -5,17 +5,29 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { AppRoutingModule } from './/app-routing.module';
+
+
+import { DataComponent } from './data/data.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ReactiveformComponent
+    ReactiveformComponent,
+    DataComponent
   ],
   imports: [
     BrowserModule,
+
     
-    ReactiveFormsModule
+  ReactiveFormsModule,
+
+    
+  AppRoutingModule
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
